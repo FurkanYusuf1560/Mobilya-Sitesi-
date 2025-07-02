@@ -1,0 +1,83 @@
+.tanitim-yazi {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s;
+}
+
+.tanitim-yazi.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Senin mevcut tanitim-container ve diğer csslerin buraya gelecek, değişiklik yok */
+
+/* Örnek mevcut kısım: */
+.tanitim-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 5%;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.tanitim-resim {
+  flex: 1 1 500px;
+  min-width: 300px;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  order: 1;
+}
+
+.tanitim-resim img {
+  width: 100%;
+  height: 100%;
+  object-fit: initial;
+}
+
+.tanitim-yazi {
+  flex: 1 1 100px;
+  min-width: 300px;
+  order: 2;
+}
+
+.tanitim-yazi h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.tanitim-yazi p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  max-width: 800px;
+}
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  .tanitim-container {
+    flex-direction: column;
+  }
+
+  .tanitim-resim {
+    order: 1;
+    height: 300px;
+  }
+
+  .tanitim-yazi {
+    order: 2;
+    text-align: center;
+  }
+
+  .tanitim-yazi h1 {
+    font-size: 2rem;
+  }
+
+  .tanitim-yazi p {
+    font-size: 1.3rem;
+  }
+}

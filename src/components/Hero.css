@@ -1,0 +1,123 @@
+/* Tüm bölümü kapsayan container */
+.section-container {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* İçerik düzeni */
+.section-content {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100dvh;
+  align-items: stretch;
+}
+
+/* Resmi sola al */
+.section-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Yazı bölümü */
+.text-content {
+  flex: 1;
+  min-width: 300px;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Yazı görünür olduğunda */
+.text-content.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Görsel bölümü */
+.image-content {
+  flex: 1;
+  min-width: 300px;
+  height: 100dvh;
+}
+
+/* 📌 Masaüstünde resmin tamamı görünsün */
+.image-content img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background-color: #fff;
+}
+
+/* Başlık ve paragraf */
+.text-content h1,
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* Buton stili */
+.text-content button {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 50px;
+  border: 2px solid #333;
+  background-color: transparent;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.text-content button:hover {
+  background-color: #8B4513;
+  color: #fff;
+  border: none;
+}
+
+/* 📱 Mobil uyumlu tasarım */
+@media (max-width: 768px) {
+  .section-content,
+  .section-content.reverse {
+    flex-direction: column-reverse !important;
+    min-height: auto;
+  }
+
+  .image-content {
+    height: 50vh;
+    min-height: 300px;
+    min-width: auto;
+  }
+
+  .image-content img {
+    object-fit: cover; /* mobilde alanı doldursun */
+  }
+
+  .text-content {
+    padding: 30px;
+  }
+
+  .text-content h1,
+  .text-content h2 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .text-content button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
