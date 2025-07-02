@@ -3,7 +3,7 @@ import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
 const dolapVerileri = [
-  { ad: "Beyaz Sürgülü Dolap", resimYolu: "/images/dolap1.jpeg" },
+  { ad: "Beyaz Sürgülü Dolap", resimYolu: "/images/dolap2.jpeg" },
   { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap3.jpeg" },
   { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap3.jpeg" },
   { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap3.jpeg" },

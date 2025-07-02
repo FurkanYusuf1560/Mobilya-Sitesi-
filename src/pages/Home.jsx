@@ -16,7 +16,7 @@ function Home() {
       <SectionIntro
         baslik="Dolap Modelleri"
         aciklama="Estetik ve işlevselliği bir araya getiren dolaplarımız, yatak odanızda hem düzen hem de şıklık sağlar. Her biri özenle seçilmiş malzemelerle, el işçiliğiyle üretilen dolaplarımız, yıllarca güvenle kullanabileceğiniz sağlamlıktadır."
-        resim="/images/dolap1.jpeg"
+        resim="/images/dolap2.jpeg"
         hedefLink="/dolap"
         reverse={true}
       />
