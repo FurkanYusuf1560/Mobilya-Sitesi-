@@ -3,13 +3,13 @@ import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
 const sifonyerVerileri = [
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
-  { ad: "Ceviz Şifonyer", resimYolu: "/images/sifonyer1.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
+  { ad: "Ceviz Şifonyer", resimYolu: "/images/dolap3.jpeg" },
 ];
 
 function Sifonyer() {
