@@ -16,7 +16,7 @@ function Home() {
       <SectionIntro
         baslik="Dolap Modelleri"
         aciklama="Estetik ve işlevselliği bir araya getiren dolaplarımız, yatak odanızda hem düzen hem de şıklık sağlar. Her biri özenle seçilmiş malzemelerle, el işçiliğiyle üretilen dolaplarımız, yıllarca güvenle kullanabileceğiniz sağlamlıktadır."
-        resim="/images/dolap2.jpeg"
+        resim="/images/dolap1.jpeg"
         hedefLink="/dolap"
         reverse={true}
       />
@@ -24,7 +24,7 @@ function Home() {
       <SectionIntro
         baslik="Komodin Tasarımları"
         aciklama="Modern çizgilerle tasarlanmış komodinlerimiz, yatağınızın yanı başında hem estetik bir tamamlayıcı hem de kullanışlı bir alan sunar. Her detayında ustalık ve zarafeti barındıran komodin modellerimizi mutlaka keşfedin."
-        resim="/images/komodin1.jpeg"
+        resim="/images/dolap1.jpeg"
         hedefLink="/komodin"
         reverse={false}
       />
@@ -32,7 +32,7 @@ function Home() {
       <SectionIntro
         baslik="Şifonyer Koleksiyonu"
         aciklama="Şifonyer koleksiyonumuz, geniş depolama alanı ve zarif tasarımı ile yaşam alanınıza değer katar. Ahşabın sıcaklığıyla modern dokunuşları birleştirdiğimiz bu ürünler, hem kullanışlı hem dekoratiftir."
-        resim="/images/sifonyer1.jpeg"
+        resim="/images/dolap1.jpeg"
         hedefLink="/sifonyer"
         reverse={true}
       />
