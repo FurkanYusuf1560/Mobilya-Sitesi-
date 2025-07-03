@@ -4,12 +4,29 @@ import "./Dolap.css";
 
 const dolapVerileri = [
   { ad: "Beyaz Sürgülü Dolap", resimYolu: "/images/dolap2.jpeg" },
-  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap3.jpeg" },
-  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap3.jpeg" },
-  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap3.jpeg" },
-  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap2.jpeg" },
-  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap2.jpeg" },
-  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap2.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap4.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap5.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap6.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap7.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap8.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap9.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap11.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap12.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap13.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap14.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap15.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap16.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap17.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap18.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap19.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap20.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap21.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap22.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap23.jpeg" },
+  { ad: "Ceviz Kapaklı Dolap", resimYolu: "/images/dolap24.jpeg" },
+  
+  
+  
 ];
 
 function Dolap() {
@@ -37,7 +54,7 @@ function Dolap() {
       {/* TANITIM FLEX BÖLÜMÜ */}
       <div className="tanitim-container">
         <div className="tanitim-resim">
-          <img src="/images/dolap3.jpeg" alt="Dolap Tanıtım" />
+          <img src="/images/dolap1.jpeg" alt="Dolap Tanıtım" />
         </div>
         <div ref={yaziRef} className={`tanitim-yazi ${visible ? "visible" : ""}`}>
           <h1>Hayalinizdeki Dolabı Tasarlayın</h1>

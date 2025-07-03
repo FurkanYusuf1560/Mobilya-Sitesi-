@@ -32,7 +32,7 @@ function Hero({ baslik, aciklama, tel, resim, reverse = false }) {
           <div className="contact-icons">
             <p><FontAwesomeIcon icon={faPhone} /> {tel}</p>
             <p><FontAwesomeIcon icon={faInstagram} /> @pakodizayn</p>
-            <p><FontAwesomeIcon icon={faLocationDot} /> Güneşevler, Eğribucak Sk. No:22, 06140 Altındağ/Ankara</p>
+            <p><FontAwesomeIcon icon={faLocationDot} /> Güneşevler, Eğribucak Sk. No:24, 06140 Altındağ/Ankara</p>
           </div>
         </div>
         <div className="image-content">
