@@ -24,9 +24,6 @@ const dolapVerileri = [
   { ad: "", resimYolu: "/images/dolap22.jpeg" },
   { ad: "", resimYolu: "/images/dolap23.jpeg" },
   { ad: "", resimYolu: "/images/dolap24.jpeg" },
-  
-  
-  
 ];
 
 function Dolap() {
@@ -54,7 +51,20 @@ function Dolap() {
       {/* TANITIM FLEX BÖLÜMÜ */}
       <div className="tanitim-container">
         <div className="tanitim-resim">
-          <img src="/images/dolap1.jpeg" alt="Dolap Tanıtım" />
+          <video
+            src="/videos/dolap-tanitim.mp4"
+            autoPlay
+            controls
+            muted
+            loop
+            playsInline
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "12px"
+            }}
+          />
         </div>
         <div ref={yaziRef} className={`tanitim-yazi ${visible ? "visible" : ""}`}>
           <h1>Hayalinizdeki Dolabı Tasarlayın</h1>
