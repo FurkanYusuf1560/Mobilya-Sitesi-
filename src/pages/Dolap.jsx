@@ -36,7 +36,6 @@ const dolapVerileri = [
   { ad: "", resimYolu: "/images/dolap33.jpeg" },
   { ad: "", resimYolu: "/images/dolap34.jpeg" },
   { ad: "", resimYolu: "/images/dolap35.jpeg" },
-  { ad: "", resimYolu: "/images/dolap36.jpeg" },
   { ad: "", resimYolu: "/images/dolap37.jpeg" },
   { ad: "", resimYolu: "/images/dolap38.jpeg" },
   { ad: "", resimYolu: "/images/dolap39.jpeg" },
