@@ -41,6 +41,17 @@ const dolapVerileri = [
   { ad: "", resimYolu: "/images/dolap39.jpeg" },
   { ad: "", resimYolu: "/images/dolap40.jpeg" },
   { ad: "", resimYolu: "/images/dolap41.jpeg" },
+  { ad: "", resimYolu: "/images/dolap42.jpeg" },
+  { ad: "", resimYolu: "/images/dolap43.jpeg" },
+  { ad: "", resimYolu: "/images/dolap44.jpeg" },
+  { ad: "", resimYolu: "/images/dolap45.jpeg" },
+  { ad: "", resimYolu: "/images/dolap46.jpeg" },
+  { ad: "", resimYolu: "/images/dolap47.jpeg" },
+  { ad: "", resimYolu: "/images/dolap48.jpeg" },
+  { ad: "", resimYolu: "/images/dolap49.jpeg" },
+  { ad: "", resimYolu: "/images/dolap50.jpeg" },
+  { ad: "", resimYolu: "/images/dolap51.jpeg" },
+  { ad: "", resimYolu: "/images/dolap52.jpeg" },
 ];
 
 function Dolap() {
