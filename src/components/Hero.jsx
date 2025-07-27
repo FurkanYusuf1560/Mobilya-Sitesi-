@@ -29,11 +29,14 @@ function Hero({ baslik, aciklama, tel, resim, reverse = false }) {
         <div ref={yaziRef} className={`text-content ${visible ? "visible" : ""}`}>
           <h1>{baslik}</h1>
           <p>{aciklama}</p>
-          <div className="contact-icons">
-            <p><FontAwesomeIcon icon={faPhone} /> {tel}</p>
-            <p><FontAwesomeIcon icon={faInstagram} /> @pakodizayn</p>
-            <p><FontAwesomeIcon icon={faLocationDot} /> Güneşevler, Eğribucak Sk. No:24, 06140 Altındağ/Ankara</p>
-          </div>
+        <div className="contact-icons">
+  <p><FontAwesomeIcon icon={faPhone} /> {tel}</p>
+  <a href="https://www.instagram.com/pakodizayn" target="_blank" rel="noopener noreferrer">
+    <p><FontAwesomeIcon icon={faInstagram} />  pakodizayn</p>
+  </a>
+  <p><FontAwesomeIcon icon={faLocationDot} /> Güneşevler, Eğribucak Sk. No:24, 06140 Altındağ/Ankara</p>
+</div>
+
         </div>
         <div className="image-content">
           <img src={resim} alt="hero" onError={(e) => e.target.src = "/images/placeholder.jpg"} />
