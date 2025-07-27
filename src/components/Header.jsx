@@ -9,22 +9,29 @@ function Header() {
         width: "100%",
         zIndex: 1000,
         display: "flex",
-        justifyContent: "center",
-        gap: "30px",
-        padding: "20px",
-        transition: "all 0.3s ease",
-        backgroundColor: "transparent",      // her zaman şeffaf
-        backdropFilter: "none",              // istersen blur ekleyebilirsin: "blur(8px)"
-        boxShadow: "none",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        padding: "20px 40px",
+        backgroundColor: "transparent", // TAM ŞEFFAF
+        boxShadow: "none",              // Gölge yok
+        backdropFilter: "none",         // Bulanıklık yok
       }}
     >
-      <Link to="/">AnaSayfa</Link>
-      <Link to="/dolap">Dolap</Link>
-      <Link to="/komodin">Komodin</Link>
-      <Link to="/sifonyer">Şifonyer</Link>
-      
+      <nav style={{ display: "flex", gap: "30px", fontSize: "18px" }}>
+        <Link style={linkStyle} to="/">AnaSayfa</Link>
+        <Link style={linkStyle} to="/dolap">Dolap</Link>
+        <Link style={linkStyle} to="/komodin">Komodin</Link>
+        <Link style={linkStyle} to="/sifonyer">Şifonyer</Link>
+      </nav>
     </header>
   );
 }
+
+const linkStyle = {
+  color: "#000", // Gerekirse #fff yapabilirsin
+  textDecoration: "none",
+  fontWeight: "bold",
+  transition: "color 0.3s",
+};
 
 export default Header;
