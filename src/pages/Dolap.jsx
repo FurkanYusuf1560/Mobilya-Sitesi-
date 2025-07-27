@@ -52,6 +52,7 @@ const dolapVerileri = [
   { ad: "", resimYolu: "/images/dolap50.jpeg" },
   { ad: "", resimYolu: "/images/dolap51.jpeg" },
   { ad: "", resimYolu: "/images/dolap52.jpeg" },
+  { ad: "", resimYolu: "/images/dolap52.jpeg" },
 ];
 
 function Dolap() {
