@@ -1,0 +1,83 @@
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 24px;
+}
+
+.site-header__inner {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 16px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
+  background: rgba(36, 23, 18, 0.45);
+  backdrop-filter: blur(2px);
+  box-shadow: 0 16px 40px rgba(20, 12, 8, 0.2);
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  color: #fff8f1;
+}
+
+.site-header__eyebrow {
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255, 244, 233, 0.72);
+}
+
+.site-header__title {
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header__nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.site-header__nav a {
+  color: #fff8f1;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+}
+
+.site-header__nav a:hover {
+  background: rgba(255, 248, 241, 0.14);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 860px) {
+  .site-header {
+    padding: 16px;
+  }
+
+  .site-header__inner {
+    border-radius: 28px;
+    padding: 16px;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-header__nav {
+    justify-content: center;
+  }
+}

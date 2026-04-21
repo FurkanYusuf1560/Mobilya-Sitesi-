@@ -14,7 +14,7 @@ function SectionIntro({ baslik, aciklama, resim, hedefLink, reverse = false }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
 
     if (yaziRef.current) observer.observe(yaziRef.current);
@@ -22,20 +22,21 @@ function SectionIntro({ baslik, aciklama, resim, hedefLink, reverse = false }) {
   }, []);
 
   return (
-    <div className="section-container">
-      <div className={`section-content ${reverse ? "reverse" : ""}`}>
-        <div ref={yaziRef} className={`text-content ${visible ? "visible" : ""}`}>
+    <section className="intro-section">
+      <div className={`intro-layout ${reverse ? "reverse" : ""}`}>
+        <div ref={yaziRef} className={`intro-copy ${visible ? "visible" : ""}`}>
+          <span className="intro-kicker">Seçili koleksiyon</span>
           <h2>{baslik}</h2>
           <p>{aciklama}</p>
-          <Link to={hedefLink}>
-            <button>Detayları Gör</button>
+          <Link className="intro-link" to={hedefLink}>
+            Detayları gör
           </Link>
         </div>
-        <div className="image-content">
-          <img src={resim} alt={baslik} onError={(e) => e.target.src = "/images/placeholder.jpg"} />
+        <div className="intro-media">
+          <img src={resim} alt={baslik} />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

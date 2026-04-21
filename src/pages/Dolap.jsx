@@ -3,56 +3,36 @@ import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
 const dolapVerileri = [
-  { ad: "", resimYolu: "/images/dolap2.jpeg" },
-  { ad: "", resimYolu: "/images/dolap4.jpeg" },
-  { ad: "", resimYolu: "/images/dolap5.jpeg" },
-  { ad: "", resimYolu: "/images/dolap6.jpeg" },
-  { ad: "", resimYolu: "/images/dolap7.jpeg" },
-  { ad: "", resimYolu: "/images/dolap8.jpeg" },
-  { ad: "", resimYolu: "/images/dolap9.jpeg" },
-  { ad: "", resimYolu: "/images/dolap11.jpeg" },
-  { ad: "", resimYolu: "/images/dolap12.jpeg" },
-  { ad: "", resimYolu: "/images/dolap13.jpeg" },
-  { ad: "", resimYolu: "/images/dolap14.jpeg" },
-  { ad: "", resimYolu: "/images/dolap15.jpeg" },
-  { ad: "", resimYolu: "/images/dolap16.jpeg" },
-  { ad: "", resimYolu: "/images/dolap17.jpeg" },
-  { ad: "", resimYolu: "/images/dolap18.jpeg" },
-  { ad: "", resimYolu: "/images/dolap19.jpeg" },
-  { ad: "", resimYolu: "/images/dolap20.jpeg" },
-  { ad: "", resimYolu: "/images/dolap21.jpeg" },
-  { ad: "", resimYolu: "/images/dolap22.jpeg" },
-  { ad: "", resimYolu: "/images/dolap23.jpeg" },
-  { ad: "", resimYolu: "/images/dolap24.jpeg" },
-  { ad: "", resimYolu: "/images/dolap25.jpeg" },
-  { ad: "", resimYolu: "/images/dolap26.jpeg" },
-  { ad: "", resimYolu: "/images/dolap27.jpeg" },
-  { ad: "", resimYolu: "/images/dolap28.jpeg" },
-  { ad: "", resimYolu: "/images/dolap29.jpeg" },
-  { ad: "", resimYolu: "/images/dolap30.jpeg" },
-  { ad: "", resimYolu: "/images/dolap31.jpeg" },
-  { ad: "", resimYolu: "/images/dolap32.jpeg" },
-  { ad: "", resimYolu: "/images/dolap33.jpeg" },
-  { ad: "", resimYolu: "/images/dolap33.jpeg" },
-  { ad: "", resimYolu: "/images/dolap34.jpeg" },
-  { ad: "", resimYolu: "/images/dolap35.jpeg" },
-  { ad: "", resimYolu: "/images/dolap37.jpeg" },
-  { ad: "", resimYolu: "/images/dolap38.jpeg" },
-  { ad: "", resimYolu: "/images/dolap39.jpeg" },
-  { ad: "", resimYolu: "/images/dolap40.jpeg" },
-  { ad: "", resimYolu: "/images/dolap41.jpeg" },
-  { ad: "", resimYolu: "/images/dolap42.jpeg" },
-  { ad: "", resimYolu: "/images/dolap43.jpeg" },
-  { ad: "", resimYolu: "/images/dolap44.jpeg" },
-  { ad: "", resimYolu: "/images/dolap45.jpeg" },
-  { ad: "", resimYolu: "/images/dolap46.jpeg" },
-  { ad: "", resimYolu: "/images/dolap47.jpeg" },
-  { ad: "", resimYolu: "/images/dolap48.jpeg" },
-  { ad: "", resimYolu: "/images/dolap49.jpeg" },
-  { ad: "", resimYolu: "/images/dolap50.jpeg" },
-  { ad: "", resimYolu: "/images/dolap51.jpeg" },
-  { ad: "", resimYolu: "/images/dolap52.jpeg" },
-  
+  {
+    ad: "Özel Ölçü Dolap",
+    resimYolu: "/images/Gemini_Generated_Image_2juznk2juznk2juz.png",
+    etiket: "Özel üretim",
+  },
+  {
+    ad: "Modern Kapak Formu",
+    resimYolu: "/images/Gemini_Generated_Image_57h4m257h4m257h4.png",
+    etiket: "Yeni seri",
+  },
+  {
+    ad: "Sıcak Ahşap Doku",
+    resimYolu: "/images/Gemini_Generated_Image_8awwj98awwj98aww.png",
+    etiket: "Doğal ton",
+  },
+  {
+    ad: "Yatak Odası Gardırop",
+    resimYolu: "/images/Gemini_Generated_Image_yxb6r0yxb6r0yxb6.png",
+    etiket: "Fonksiyonel",
+  },
+  {
+    ad: "Dengeli Cephe Tasarımı",
+    resimYolu: "/images/Gemini_Generated_Image_7oc5zk7oc5zk7oc5.png",
+    etiket: "Modern çizgi",
+  },
+  {
+    ad: "Atölye Seçkisi",
+    resimYolu: "/images/dolap3.jpeg",
+    etiket: "Usta işi",
+  },
 ];
 
 function Dolap() {
@@ -67,7 +47,7 @@ function Dolap() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.25 }
     );
 
     if (yaziRef.current) observer.observe(yaziRef.current);
@@ -76,51 +56,55 @@ function Dolap() {
   }, []);
 
   return (
-    <div>
-      {/* TANITIM FLEX BÖLÜMÜ */}
-      <div className="tanitim-container">
-        <div className="tanitim-resim">
-          <video
-            src="/videos/dolap-tanitim.mp4"
-            autoPlay
-            controls
-            muted
-            loop
-            playsInline
-            style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              borderRadius: "12px"
-            }}
+    <div className="product-page">
+      <section className="product-hero product-hero--image">
+        <div className="product-hero__content">
+          <span className="product-hero__kicker">Dolap koleksiyonu</span>
+          <h1>Hayalinizdeki dolabı birlikte şekillendirelim.</h1>
+          <p>
+            Modern yaşam alanlarına uyum sağlayan dolap modellerimiz; ölçü, kapak
+            düzeni, renk tonu ve depolama ihtiyacına göre şekilleniyor. Galerideki
+            her parça, atölyeden çıkan gerçek uygulamalardan ilham alıyor.
+          </p>
+          <div className="product-hero__meta">
+            <span>Özel ölçü seçenekleri</span>
+            <span>El işçiliği detaylar</span>
+            <span>Ankara üretim</span>
+          </div>
+        </div>
+        <div className="product-hero__media">
+          <img
+            src="/images/Gemini_Generated_Image_yxb6r0yxb6r0yxb6.png"
+            alt="Dolap koleksiyonu"
           />
         </div>
+      </section>
+
+      <section className="product-intro">
         <div ref={yaziRef} className={`tanitim-yazi ${visible ? "visible" : ""}`}>
-          <h1>Hayalinizdeki Dolabı Tasarlayın</h1>
+          <h2>İşlev ve estetiği dengede tutan çözümler</h2>
           <p>
-            Dolap koleksiyonumuz, modern yaşam alanlarınıza şıklık ve işlevsellik
-            katıyor. Gardırop, kitaplık veya dekoratif depolama çözümleri için
-            özenle tasarlanmış ürünlerimizle yaşam alanlarınızı yeniden keşfedin.
-            Kaliteli malzemeler ve özenli işçilikle üretilen dolaplarımız, uzun
-            yıllar size eşlik edecek.
+            Gardırop, sürgülü sistem veya dekoratif depolama çözümleri için
+            tasarlanan dolaplarımız; malzeme kalitesi, ölçü hassasiyeti ve uzun
+            ömürlü kullanım odağıyla hazırlanır. İsterseniz buradaki örnekler
+            üzerinden benzer bir çizgi, isterseniz tamamen size özel bir kurgu
+            oluşturulabilir.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* ÜRÜNLER */}
-      <div style={{ padding: "40px 5%" }}>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "30px",
-          }}
-        >
+      <section className="product-gallery">
+        <div className="product-gallery__grid">
           {dolapVerileri.map((urun, index) => (
-            <UrunKarti key={index} ad={urun.ad} resimYolu={urun.resimYolu} />
+            <UrunKarti
+              key={`${urun.resimYolu}-${index}`}
+              ad={urun.ad}
+              resimYolu={urun.resimYolu}
+              etiket={urun.etiket}
+            />
           ))}
         </div>
-      </div>
+      </section>
     </div>
   );
 }

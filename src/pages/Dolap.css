@@ -1,7 +1,99 @@
+.product-page {
+  padding: 132px 24px 72px;
+}
+
+.product-hero,
+.product-intro,
+.product-gallery {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+}
+
+.product-hero {
+  display: grid;
+  grid-template-columns: 0.96fr 1.04fr;
+  gap: 32px;
+  align-items: stretch;
+  margin-bottom: 28px;
+}
+
+.product-hero__content,
+.product-hero__media {
+  border-radius: 34px;
+  min-height: 420px;
+}
+
+.product-hero__content {
+  padding: 42px;
+  background:
+    linear-gradient(160deg, rgba(255, 251, 245, 0.96), rgba(241, 226, 207, 0.95)),
+    var(--surface-strong);
+  border: 1px solid rgba(125, 77, 49, 0.12);
+  box-shadow: var(--shadow);
+}
+
+.product-hero__kicker {
+  display: inline-flex;
+  margin-bottom: 16px;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.product-hero__content h1 {
+  margin: 0 0 18px;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: clamp(2.3rem, 4vw, 4rem);
+  line-height: 0.98;
+}
+
+.product-hero__content p {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.85;
+  color: var(--text-soft);
+}
+
+.product-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.product-hero__meta span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 16px;
+  border-radius: 999px;
+  background: rgba(125, 77, 49, 0.1);
+  color: var(--accent-strong);
+  font-size: 0.92rem;
+}
+
+.product-hero__media {
+  overflow: hidden;
+  box-shadow: var(--shadow-strong);
+}
+
+.product-hero__media video,
+.product-hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-intro {
+  padding: 18px 0 10px;
+}
+
 .tanitim-yazi {
+  max-width: 820px;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 1.2s ease-out 0.2s, transform 1.2s ease-out 0.2s;
+  transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .tanitim-yazi.visible {
@@ -9,76 +101,55 @@
   transform: translateY(0);
 }
 
-/* Senin mevcut tanitim-container ve diğer csslerin buraya gelecek, değişiklik yok */
-
-/* Örnek mevcut kısım: */
-.tanitim-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 60px 5%;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-.tanitim-resim {
-  flex: 1 1 500px;
-  min-width: 300px;
-  height: 450px;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  order: 1;
-}
-
-.tanitim-resim video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 12px;
-}
-
-.tanitim-yazi {
-  flex: 1 1 100px;
-  min-width: 300px;
-  order: 2;
-}
-
-.tanitim-yazi h1 {
-  font-size: 2.8rem;
-  margin-bottom: 20px;
-  color: #333;
+.tanitim-yazi h2 {
+  margin: 0 0 12px;
+  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
 }
 
 .tanitim-yazi p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #666;
-  max-width: 800px;
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 1.04rem;
+  line-height: 1.85;
 }
 
-/* Mobil görünüm */
-@media (max-width: 768px) {
-  .tanitim-container {
-    flex-direction: column;
+.product-gallery {
+  padding-top: 26px;
+}
+
+.product-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 920px) {
+  .product-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-page {
+    padding: 166px 16px 56px;
   }
 
-  .tanitim-resim {
-    order: 1;
-    height: 300px;
+  .product-hero__content,
+  .product-hero__media {
+    min-height: auto;
+    border-radius: 24px;
   }
 
-  .tanitim-yazi {
-    order: 2;
-    text-align: center;
+  .product-hero__content {
+    padding: 30px 24px;
   }
 
-  .tanitim-yazi h1 {
-    font-size: 2rem;
+  .product-hero__media {
+    min-height: 320px;
   }
 
-  .tanitim-yazi p {
-    font-size: 1.3rem;
+  .product-gallery__grid {
+    grid-template-columns: 1fr;
   }
 }

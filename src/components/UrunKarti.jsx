@@ -1,22 +1,16 @@
-function UrunKarti({ resimYolu, ad, }) {
+import "./UrunKarti.css";
+
+function UrunKarti({ resimYolu, ad, etiket }) {
   return (
-    <div style={{
-      border: "1px solid #ccc",
-      borderRadius: "12px",
-      padding: "10px",
-      textAlign: "center",
-      backgroundColor: "#fff",
-      boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-      transition: "transform 0.3s",
-    }}>
-      <img
-        src={resimYolu}
-        alt={ad}
-        style={{ width: "100%", height: "auto", borderRadius: "8px" }}
-      />
-      <h3 style={{ marginTop: "10px" }}>{ad}</h3>
-      
-    </div>
+    <article className="product-card">
+      <div className="product-card__media">
+        <img src={resimYolu} alt={ad} />
+        {etiket ? <span className="product-card__tag">{etiket}</span> : null}
+      </div>
+      <div className="product-card__body">
+        <h3>{ad}</h3>
+      </div>
+    </article>
   );
 }
 

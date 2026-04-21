@@ -1,47 +1,23 @@
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   return (
-    <header
-      style={{
-        position: "fixed",
-        top: 0,
-        width: "100%",
-        zIndex: 1000,
-        display: "flex",
-        flexWrap: "wrap",
-        justifyContent: "center", // ORTADA hizalı
-        alignItems: "center",
-        padding: "10px 20px", // Daha dar padding
-        backgroundColor: "transparent",
-        boxShadow: "none",
-        backdropFilter: "none",
-      }}
-    >
-      <nav
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: "20px",
-          fontSize: "16px",
-          justifyContent: "center",
-        }}
-      >
-        <Link style={linkStyle} to="/">AnaSayfa</Link>
-        <Link style={linkStyle} to="/dolap">Dolap</Link>
-        <Link style={linkStyle} to="/komodin">Komodin</Link>
-        <Link style={linkStyle} to="/sifonyer">Şifonyer</Link>
-      </nav>
+    <header className="site-header">
+      <div className="site-header__inner">
+        <Link className="site-header__brand" to="/">
+          <span className="site-header__eyebrow">Ankara el işçiliği</span>
+          <span className="site-header__title">Pako Dizayn</span>
+        </Link>
+        <nav className="site-header__nav">
+          <Link to="/">Anasayfa</Link>
+          <Link to="/dolap">Dolap</Link>
+          <Link to="/komodin">Komodin</Link>
+          <Link to="/sifonyer">Şifonyer</Link>
+        </nav>
+      </div>
     </header>
   );
 }
-
-const linkStyle = {
-  color: "#000",
-  textDecoration: "none",
-  fontWeight: "bold",
-  textShadow: "1px 1px 3px rgba(0,0,0,0.3)",
-  transition: "color 0.3s",
-};
 
 export default Header;

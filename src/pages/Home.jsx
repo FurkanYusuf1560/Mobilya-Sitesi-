@@ -6,33 +6,32 @@ function Home() {
     <div style={{ width: "100%", overflowX: "hidden" }}>
       <Hero
         baslik="Pako Dizayn Mobilya"
-        aciklama="Halil Çevik, mobilya sektöründe 35 yılı aşkın tecrübesiyle, el işçiliğinin ve ustalığın simgesidir. Bugün kendi markası olan PakoDizayn ile, yılların birikimini modern çizgilerle buluşturarak özel tasarım dolap, komodin ve şifonyerler üretmektedir. Her ürün, kaliteye olan bağlılığının, detaylara verdiği önemin ve müşteri memnuniyetine duyduğu saygının bir yansımasıdır. Yatak odanıza estetik ve fonksiyonellik katmak istiyorsanız, Halil Çevik imzası taşıyan PakoDizayn ürünleri tam size göre."
+        aciklama="Halil Çevik, 35 yılı aşkın ustalık birikimini Pako Dizayn çatısı altında çağdaş çizgilerle buluşturuyor. Ölçüye özel dolaplar, komodinler ve şifonyerler; doğru malzeme, temiz işçilik ve uzun ömürlü kullanım odağıyla hazırlanıyor. Yatak odanızda sıcak, düzenli ve karakterli bir atmosfer arıyorsanız, burada her parça gerçek bir atölye emeği taşıyor."
         tel="0539 483 36 93"
-        resim="/images/dolap3.jpeg"
-        hedefLink="/hakkimizda"
+        resim="/images/Gemini_Generated_Image_yxb6r0yxb6r0yxb6.png"
         reverse={false}
       />
 
       <SectionIntro
         baslik="Dolap Modelleri"
-        aciklama="Estetik ve işlevselliği bir araya getiren dolaplarımız, yatak odanızda hem düzen hem de şıklık sağlar. Her biri özenle seçilmiş malzemelerle, el işçiliğiyle üretilen dolaplarımız, yıllarca güvenle kullanabileceğiniz sağlamlıktadır."
-        resim="/images/dolap1.jpeg"
+        aciklama="Kapak oranından iç bölme düzenine kadar düşünülmüş dolaplarımız, odanın mimarisine uyum sağlayan güçlü bir ana parça gibi tasarlanır. Geniş depolama alanı ve dengeli yüzey diliyle işlevi estetikle bir araya getirir."
+        resim="/images/Gemini_Generated_Image_2juznk2juznk2juz.png"
         hedefLink="/dolap"
         reverse={true}
       />
 
       <SectionIntro
         baslik="Komodin Tasarımları"
-        aciklama="Modern çizgilerle tasarlanmış komodinlerimiz, yatağınızın yanı başında hem estetik bir tamamlayıcı hem de kullanışlı bir alan sunar. Her detayında ustalık ve zarafeti barındıran komodin modellerimizi mutlaka keşfedin."
-        resim="/images/dolap1.jpeg"
+        aciklama="Yatak başı kullanımını sade ama güçlü bir detayla tamamlayan komodinlerimiz, çekmece oranları ve yüzey geçişleriyle bütünlüklü bir görünüm sunar. Küçük alanda düzen, şıklık ve malzeme kalitesini birlikte hissettirir."
+        resim="/images/Gemini_Generated_Image_vr9kxpvr9kxpvr9k.png"
         hedefLink="/komodin"
         reverse={false}
       />
 
       <SectionIntro
         baslik="Şifonyer Koleksiyonu"
-        aciklama="Şifonyer koleksiyonumuz, geniş depolama alanı ve zarif tasarımı ile yaşam alanınıza değer katar. Ahşabın sıcaklığıyla modern dokunuşları birleştirdiğimiz bu ürünler, hem kullanışlı hem dekoratiftir."
-        resim="/images/dolap1.jpeg"
+        aciklama="Şifonyer koleksiyonunda sıcak ahşap etkisini modern çizgilerle buluşturuyoruz. Geniş çekmece hacmi, dengeli form ve özenli kulp detayları sayesinde hem düzen sağlayan hem de odanın karakterini yükselten parçalar ortaya çıkıyor."
+        resim="/images/Gemini_Generated_Image_oh0v2toh0v2toh0v.png"
         hedefLink="/sifonyer"
         reverse={true}
       />
