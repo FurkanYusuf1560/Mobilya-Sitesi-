@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Seo from "../components/Seo";
 import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
@@ -47,6 +48,11 @@ function Sifonyer() {
 
   return (
     <div className="product-page">
+      <Seo
+        title="Şifonyer Modelleri | Sn Çevik Mobilya Ankara"
+        description="Ankara'da özel üretim şifonyer modelleri. Geniş çekmeceli, modern ve dayanıklı yatak odası mobilyaları için Sn Çevik Mobilya."
+        path="/sifonyer"
+      />
       <section className="product-hero product-hero--image">
         <div className="product-hero__content">
           <span className="product-hero__kicker">Şifonyer koleksiyonu</span>

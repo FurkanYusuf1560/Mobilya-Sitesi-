@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Seo from "../components/Seo";
 import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
@@ -47,6 +48,11 @@ function Komodin() {
 
   return (
     <div className="product-page">
+      <Seo
+        title="Komodin Modelleri | Sn Çevik Mobilya Ankara"
+        description="Yatak odası için özel üretim komodin modelleri. Ankara Altındağ Sn Çevik Mobilya atölyesinde ölçüye uygun komodin tasarımları."
+        path="/komodin"
+      />
       <section className="product-hero product-hero--image">
         <div className="product-hero__content">
           <span className="product-hero__kicker">Komodin seçkisi</span>

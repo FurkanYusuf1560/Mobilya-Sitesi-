@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import Seo from "../components/Seo";
 import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
@@ -57,6 +58,11 @@ function Dolap() {
 
   return (
     <div className="product-page">
+      <Seo
+        title="Ankara Özel Ölçü Dolap Modelleri | Sn Çevik Mobilya"
+        description="Ankara'da özel ölçü dolap, gardırop ve depolama çözümleri. Sn Çevik Mobilya ile el işçiliği dolap modellerini inceleyin."
+        path="/dolap"
+      />
       <section className="product-hero product-hero--image">
         <div className="product-hero__content">
           <span className="product-hero__kicker">Dolap koleksiyonu</span>

@@ -1,9 +1,15 @@
 import Hero from "../components/Hero";
+import Seo from "../components/Seo";
 import SectionIntro from "../components/SectionIntro";
 
 function Home() {
   return (
     <div style={{ width: "100%", overflowX: "hidden" }}>
+      <Seo
+        title="Sn Çevik Mobilya | Ankara Özel Ölçü Dolap, Komodin ve Şifonyer"
+        description="Sn Çevik Mobilya, Ankara Altındağ'da özel ölçü dolap, komodin ve şifonyer üretimi yapan Pako Dizayn atölyesidir."
+        path="/"
+      />
       <Hero
         baslik="Pako Dizayn Mobilya"
         aciklama="Halil Çevik, 35 yılı aşkın ustalık birikimini Pako Dizayn çatısı altında çağdaş çizgilerle buluşturuyor. Ölçüye özel dolaplar, komodinler ve şifonyerler; doğru malzeme, temiz işçilik ve uzun ömürlü kullanım odağıyla hazırlanıyor. Yatak odanızda sıcak, düzenli ve karakterli bir atmosfer arıyorsanız, burada her parça gerçek bir atölye emeği taşıyor."
