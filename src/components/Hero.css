@@ -143,7 +143,8 @@
 .hero-media__frame img {
   width: 100%;
   height: min(72vh, 760px);
-  object-fit: cover;
+  object-fit: contain;
+  background: #efe9df;
   border-radius: 26px;
 }
 
@@ -186,7 +187,7 @@
 
 @media (max-width: 640px) {
   .hero-section {
-    padding: 158px 16px 56px;
+    padding: 116px 16px 56px;
   }
 
   .hero-copy h1 {

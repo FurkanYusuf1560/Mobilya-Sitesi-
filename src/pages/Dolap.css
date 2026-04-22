@@ -82,7 +82,8 @@
 .product-hero__media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #efe9df;
 }
 
 .product-intro {
@@ -132,7 +133,7 @@
 
 @media (max-width: 640px) {
   .product-page {
-    padding: 166px 16px 56px;
+    padding: 118px 16px 56px;
   }
 
   .product-hero__content,

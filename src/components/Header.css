@@ -81,3 +81,43 @@
     justify-content: center;
   }
 }
+
+@media (max-width: 640px) {
+  .site-header {
+    padding: 10px 12px;
+  }
+
+  .site-header__inner {
+    gap: 10px;
+    padding: 10px;
+    border-radius: 22px;
+    background: rgba(36, 23, 18, 0.62);
+  }
+
+  .site-header__brand {
+    align-items: center;
+  }
+
+  .site-header__eyebrow {
+    display: none;
+  }
+
+  .site-header__title {
+    font-size: 1rem;
+    letter-spacing: 0.12em;
+  }
+
+  .site-header__nav {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .site-header__nav a {
+    padding: 8px 4px;
+    text-align: center;
+    font-size: 0.8rem;
+    background: rgba(255, 248, 241, 0.1);
+  }
+}
