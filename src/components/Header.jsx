@@ -14,6 +14,7 @@ function Header() {
           <Link to="/dolap">Dolap</Link>
           <Link to="/komodin">Komodin</Link>
           <Link to="/sifonyer">Şifonyer</Link>
+          <Link to="/katalog">Katalog</Link>
         </nav>
       </div>
     </header>

@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Dolap from "./pages/Dolap";
 import Komodin from "./pages/Komodin";
 import Sifonyer from "./pages/Sifonyer";
+import Katalog from "./pages/Katalog";
 import "./App.css";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/dolap" element={<Dolap />} />
         <Route path="/komodin" element={<Komodin />} />
         <Route path="/sifonyer" element={<Sifonyer />} />
+        <Route path="/katalog" element={<Katalog />} />
       </Routes>
     </div>
   );
