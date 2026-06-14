@@ -21,7 +21,7 @@ function Home() {
       <SectionIntro
         baslik="Dolap Modelleri"
         aciklama="Kapak oranından iç bölme düzenine kadar düşünülmüş dolaplarımız, odanın mimarisine uyum sağlayan güçlü bir ana parça gibi tasarlanır. Geniş depolama alanı ve dengeli yüzey diliyle işlevi estetikle bir araya getirir."
-        resim="/images/Gemini_Generated_Image_2juznk2juznk2juz.png"
+        resim="/images/Gemini_Generated_Image_asjchyasjchyasjc.png"
         hedefLink="/dolap"
         reverse={true}
       />
@@ -29,17 +29,25 @@ function Home() {
       <SectionIntro
         baslik="Komodin Tasarımları"
         aciklama="Yatak başı kullanımını sade ama güçlü bir detayla tamamlayan komodinlerimiz, çekmece oranları ve yüzey geçişleriyle bütünlüklü bir görünüm sunar. Küçük alanda düzen, şıklık ve malzeme kalitesini birlikte hissettirir."
-        resim="/images/Gemini_Generated_Image_vr9kxpvr9kxpvr9k.png"
+        resim="/images/Gemini_Generated_Image_fx78oyfx78oyfx78.png"
         hedefLink="/komodin"
         reverse={false}
       />
 
       <SectionIntro
-        baslik="Şifonyer Koleksiyonu"
-        aciklama="Şifonyer koleksiyonunda sıcak ahşap etkisini modern çizgilerle buluşturuyoruz. Geniş çekmece hacmi, dengeli form ve özenli kulp detayları sayesinde hem düzen sağlayan hem de odanın karakterini yükselten parçalar ortaya çıkıyor."
-        resim="/images/Gemini_Generated_Image_oh0v2toh0v2toh0v.png"
+        baslik="Şifonyer ve Makyaj Masası"
+        aciklama="Şifonyer ve makyaj masası grubunda çekmece düzeni, ayna kullanımı ve günlük kullanım rahatlığı ön planda. Dekoratif görünümü korurken kullanışlı depolama çözümü sunan tasarımlar burada yer alıyor."
+        resim="/images/Gemini_Generated_Image_diym1wdiym1wdiym.png"
         hedefLink="/sifonyer"
         reverse={true}
+      />
+
+      <SectionIntro
+        baslik="Atölye ve Showroom"
+        aciklama="Üretim anlayışımızı, atölye düzenimizi ve yerinde uygulama örneklerini görmek isterseniz buradaki fotoğraflar markanın gerçek yüzünü gösteriyor. Tasarım kadar işçilik ve teslim kalitesi de bu alanın parçası."
+        resim="/images/sncevik.png"
+        hedefLink="/dolap"
+        reverse={false}
       />
     </div>
   );

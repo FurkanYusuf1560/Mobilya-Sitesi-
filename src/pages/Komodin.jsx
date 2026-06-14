@@ -4,26 +4,14 @@ import UrunKarti from "../components/UrunKarti";
 import "./Dolap.css";
 
 const komodinVerileri = [
-  {
-    ad: "Yatak Başı Komodini",
-    resimYolu: "/images/Gemini_Generated_Image_vr9kxpvr9kxpvr9k.png",
-    etiket: "Minimal",
-  },
-  {
-    ad: "Dikey Form Komodin",
-    resimYolu: "/images/Gemini_Generated_Image_fx78oyfx78oyfx78.png",
-    etiket: "Dikey form",
-  },
-  {
-    ad: "Doğal Ahşap Komodin",
-    resimYolu: "/images/Gemini_Generated_Image_sdvrd8sdvrd8sdvr.png",
-    etiket: "Doğal doku",
-  },
-  {
-    ad: "Takım Uyumlu Parça",
-    resimYolu: "/images/Gemini_Generated_Image_oh0v2toh0v2toh0v.png",
-    etiket: "Takım uyumu",
-  },
+  { ad: "Takım İçi Komodin", resimYolu: "/images/Gemini_Generated_Image_2juznk2juznk2juz.png", etiket: "Takım uyumu" },
+  { ad: "Aydınlık Oda Komodini", resimYolu: "/images/Gemini_Generated_Image_57h4m257h4m257h4.png", etiket: "Açık ton" },
+  { ad: "Modern Komodin Detayı", resimYolu: "/images/Gemini_Generated_Image_7oc5zk7oc5zk7oc5.png", etiket: "Modern çizgi" },
+  { ad: "Doğal Ahşap Komodin", resimYolu: "/images/Gemini_Generated_Image_8awwj98awwj98aww.png", etiket: "Doğal doku" },
+  { ad: "Yumuşak Geçişli Takım", resimYolu: "/images/Gemini_Generated_Image_fx78oyfx78oyfx78.png", etiket: "Yatak odası takımı" },
+  { ad: "Beyaz Seri Komodin", resimYolu: "/images/Gemini_Generated_Image_oh0v2toh0v2toh0v.png", etiket: "Beyaz seri" },
+  { ad: "Aynalı Dolaplı Takım", resimYolu: "/images/Gemini_Generated_Image_vr9kxpvr9kxpvr9k.png", etiket: "Takım halinde" },
+  { ad: "Gri Yatak Odası Komodini", resimYolu: "/images/Gemini_Generated_Image_sdvrd8sdvrd8sdvr.png", etiket: "Gri seri" },
 ];
 
 function Komodin() {
@@ -58,9 +46,9 @@ function Komodin() {
           <span className="product-hero__kicker">Komodin seçkisi</span>
           <h1>Odanın ritmini tamamlayan güçlü detaylar.</h1>
           <p>
-            Komodinler sadece küçük depolama alanları değil, yatak odasının
-            karakterini dengeleyen tamamlayıcı parçalar. Buradaki seçki; sade,
-            ölçülü ve malzeme hissi yüksek örneklerden oluşuyor.
+            Komodin görsellerini özellikle yatak odası takımı içinde görünen örneklerden topladım.
+            Yani burada bağımsız çekmeceli birimden çok, komodin kullanımını takım içinde gösteren
+            fotoğraflar öne çıkıyor.
           </p>
           <div className="product-hero__meta">
             <span>Takım uyumlu çözümler</span>
@@ -69,20 +57,17 @@ function Komodin() {
           </div>
         </div>
         <div className="product-hero__media">
-          <img
-            src="/images/Gemini_Generated_Image_vr9kxpvr9kxpvr9k.png"
-            alt="Komodin koleksiyonu"
-          />
+          <img src="/images/Gemini_Generated_Image_fx78oyfx78oyfx78.png" alt="Komodin koleksiyonu" />
         </div>
       </section>
 
       <section className="product-intro">
         <div ref={yaziRef} className={`tanitim-yazi ${visible ? "visible" : ""}`}>
-          <h2>Küçük ölçekte büyük etki</h2>
+          <h2>Komodin detayları takım içinde daha net görülüyor</h2>
           <p>
-            Yatak başında ihtiyaç duyulan her şeyi kolay erişilebilir kılarken,
-            genel oda kompozisyonunu da bozmayan oranlar kullanıyoruz. Yüzey,
-            kulp ve çekmece geçişlerinde sade ama kaliteli bir dil korunuyor.
+            Komodinler çoğu zaman yatak odasının tamamlayıcı parçası olduğu için bu sayfada onları
+            takım içindeki yerleriyle gösteriyoruz. Böylece çekmece oranı, başlık hizası ve genel
+            kullanım senaryosu daha rahat okunuyor.
           </p>
         </div>
       </section>
@@ -90,12 +75,7 @@ function Komodin() {
       <section className="product-gallery">
         <div className="product-gallery__grid">
           {komodinVerileri.map((urun, index) => (
-            <UrunKarti
-              key={`${urun.resimYolu}-${index}`}
-              ad={urun.ad}
-              resimYolu={urun.resimYolu}
-              etiket={urun.etiket}
-            />
+            <UrunKarti key={`${urun.resimYolu}-${index}`} ad={urun.ad} resimYolu={urun.resimYolu} etiket={urun.etiket} />
           ))}
         </div>
       </section>
