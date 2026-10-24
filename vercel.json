@@ -14,6 +14,16 @@
       "source": "/sifonyer",
       "destination": "/",
       "permanent": true
+    },
+    {
+      "source": "/katalog",
+      "destination": "/katalog/pako-dizayn-katalog.pdf",
+      "permanent": true
+    },
+    {
+      "source": "/katalog/sncevik.pdf",
+      "destination": "/katalog/pako-dizayn-katalog.pdf",
+      "permanent": true
     }
   ],
   "rewrites": [
