@@ -1,123 +1,236 @@
-.site-header {
+.ust {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 20px 24px;
+  inset: 0 0 auto;
+  z-index: 100;
+  height: var(--header-h);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.site-header__inner {
-  width: min(var(--max-width), 100%);
-  margin: 0 auto;
+/* Bulanık zemin ayrı katmanda: backdrop-filter header'a verilirse mobil menünün
+   position: fixed yerleşimi header'ın içine hapsolur. */
+.ust::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  background: rgba(246, 241, 234, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: opacity 0.3s ease;
+}
+
+.ust--dolu {
+  border-color: var(--cizgi);
+}
+
+.ust--dolu::before {
+  opacity: 1;
+}
+
+.ust__ic {
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  padding: 16px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.45);
-  border-radius: 999px;
-  background: rgba(36, 23, 18, 0.45);
-  backdrop-filter: blur(2px);
-  box-shadow: 0 16px 40px rgba(20, 12, 8, 0.2);
 }
 
-.site-header__brand {
+.marka {
   display: flex;
   flex-direction: column;
-  gap: 2px;
-  color: #fff8f1;
+  line-height: 1;
 }
 
-.site-header__eyebrow {
-  font-size: 0.68rem;
-  letter-spacing: 0.22em;
+.marka__isim {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  letter-spacing: -0.01em;
+}
+
+.marka__alt {
+  margin-top: 5px;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255, 244, 233, 0.72);
+  color: var(--murekkep-soluk);
 }
 
-.site-header__title {
-  font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  font-size: 1.3rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.site-header__nav {
+.menu {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  gap: 4px;
 }
 
-.site-header__nav a {
-  color: #fff8f1;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  transition: background-color 0.25s ease, transform 0.25s ease, color 0.25s ease;
+.menu a {
+  position: relative;
+  padding: 8px 14px;
+  font-size: 0.93rem;
+  font-weight: 500;
+  color: var(--murekkep-yumusak);
+  transition: color 0.2s ease;
 }
 
-.site-header__nav a:hover {
-  background: rgba(255, 248, 241, 0.14);
-  transform: translateY(-1px);
+.menu a:hover {
+  color: var(--murekkep);
 }
 
-@media (max-width: 860px) {
-  .site-header {
-    padding: 16px;
+.menu .menu__katalog {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.menu__katalog-ikon {
+  color: var(--ceviz);
+  font-size: 0.85rem;
+}
+
+.menu__katalog-yazi small,
+.menu__katalog-indir {
+  display: none;
+}
+
+.menu__mobil-iletisim {
+  display: none;
+}
+
+.ust__sag {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.ust__tel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.ust__tel svg {
+  color: var(--ceviz);
+  font-size: 0.82rem;
+}
+
+.ust__hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--cizgi);
+  border-radius: 50%;
+  background: transparent;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+
+@media (max-width: 1080px) {
+  .ust__tel {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .ust__hamburger {
+    display: inline-grid;
+    place-items: center;
   }
 
-  .site-header__inner {
-    border-radius: 28px;
-    padding: 16px;
+  .menu {
+    position: fixed;
+    inset: var(--header-h) 0 0;
     flex-direction: column;
     align-items: stretch;
+    gap: 0;
+    padding: 12px var(--kenar) 32px;
+    background: var(--krem);
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
   }
 
-  .site-header__nav {
-    justify-content: center;
+  .menu--acik {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+
+  .menu a {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--cizgi);
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--murekkep);
+  }
+
+  .menu .menu__katalog {
+    gap: 16px;
+    margin-top: 24px;
+    padding: 16px 18px;
+    border: 1px solid var(--kum);
+    border-radius: 14px;
+    background: var(--yuzey);
+  }
+
+  .menu__katalog-ikon {
+    font-size: 1.5rem;
+  }
+
+  .menu__katalog-yazi {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    font-size: 1.3rem;
+    line-height: 1.2;
+  }
+
+  .menu__katalog-yazi small {
+    display: block;
+    margin-top: 4px;
+    font-family: var(--font-sans);
+    font-size: 0.82rem;
+    color: var(--murekkep-soluk);
+  }
+
+  .menu__katalog-indir {
+    display: block;
+    color: var(--ceviz);
+    font-size: 1rem;
+  }
+
+  .menu .menu__mobil-iletisim {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  .menu .menu__mobil-iletisim a {
+    padding: 0 24px;
+    border-bottom: 1px solid transparent;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+  }
+
+  .menu .menu__mobil-iletisim .buton--ana {
+    color: var(--krem);
+  }
+
+  .menu .menu__mobil-iletisim .buton--cizgi {
+    border-color: rgba(30, 26, 22, 0.25);
   }
 }
 
-@media (max-width: 640px) {
-  .site-header {
-    padding: 10px 12px;
-  }
-
-  .site-header__inner {
-    gap: 10px;
-    padding: 10px;
-    border-radius: 22px;
-    background: rgba(36, 23, 18, 0.62);
-  }
-
-  .site-header__brand {
-    align-items: center;
-  }
-
-  .site-header__eyebrow {
+@media (max-width: 480px) {
+  .ust__teklif {
     display: none;
   }
 
-  .site-header__title {
-    font-size: 1rem;
-    letter-spacing: 0.12em;
-  }
-
-  .site-header__nav {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 6px;
-  }
-
-  .site-header__nav a {
-    padding: 8px 4px;
-    text-align: center;
-    font-size: 0.8rem;
-    background: rgba(255, 248, 241, 0.1);
+  .marka__isim {
+    font-size: 1.25rem;
   }
 }

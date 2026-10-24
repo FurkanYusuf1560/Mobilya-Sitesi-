@@ -1,7 +1,24 @@
 {
+  "redirects": [
+    {
+      "source": "/dolap",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/komodin",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sifonyer",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/((?!robots.txt|sitemap.xml|images/.*|videos/.*|assets/.*).*)",
+      "source": "/((?!robots.txt|sitemap.xml|favicon.svg|katalog/.*|images/.*|videos/.*|assets/.*).*)",
       "destination": "/index.html"
     }
   ],

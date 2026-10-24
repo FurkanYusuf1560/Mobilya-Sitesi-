@@ -1,0 +1,83 @@
+.alt {
+  padding: 72px 0 28px;
+  background: var(--gece);
+  color: rgba(246, 241, 234, 0.72);
+}
+
+.alt__ic {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(246, 241, 234, 0.12);
+}
+
+.alt__isim {
+  display: block;
+  margin-bottom: 14px;
+  font-family: var(--font-serif);
+  font-size: 1.9rem;
+  color: var(--krem);
+}
+
+.alt__marka p {
+  max-width: 38ch;
+  font-size: 0.95rem;
+}
+
+.alt__sutun {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.93rem;
+}
+
+.alt__sutun h3 {
+  margin-bottom: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kum);
+}
+
+.alt__sutun a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  transition: color 0.2s ease;
+}
+
+.alt__sutun a:hover {
+  color: var(--krem);
+}
+
+.alt__sutun svg {
+  width: 14px;
+  flex-shrink: 0;
+  color: var(--kum);
+}
+
+.alt__taban {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding-top: 24px;
+  font-size: 0.82rem;
+  color: rgba(246, 241, 234, 0.5);
+}
+
+@media (max-width: 720px) {
+  .alt {
+    padding-top: 56px;
+    padding-bottom: 96px;
+  }
+
+  .alt__ic {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}

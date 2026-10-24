@@ -1,0 +1,136 @@
+.slider {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--krem-koyu);
+}
+
+.slider__iz {
+  display: flex;
+  height: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.slider__iz::-webkit-scrollbar {
+  display: none;
+}
+
+.slider__kare {
+  flex: 0 0 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  cursor: zoom-in;
+}
+
+.slider__kare img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.slider__ok {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  margin-top: -21px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 252, 247, 0.92);
+  color: var(--murekkep);
+  font-size: 0.85rem;
+  box-shadow: 0 6px 18px rgba(30, 26, 22, 0.18);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.slider__ok--sol {
+  left: 12px;
+}
+
+.slider__ok--sag {
+  right: 12px;
+}
+
+.slider:hover .slider__ok:not(:disabled),
+.slider__ok:focus-visible {
+  opacity: 1;
+}
+
+.slider__ok:hover {
+  transform: scale(1.06);
+}
+
+.slider__ok:disabled {
+  visibility: hidden;
+}
+
+.slider__sayac {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(30, 26, 22, 0.55);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.slider__noktalar {
+  position: absolute;
+  left: 50%;
+  bottom: 14px;
+  display: flex;
+  gap: 2px;
+  max-width: calc(100% - 24px);
+  padding: 2px 4px;
+  border-radius: 999px;
+  background: rgba(30, 26, 22, 0.32);
+  transform: translateX(-50%);
+}
+
+.slider__noktalar button {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.slider__noktalar button::after {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.slider__noktalar .slider__nokta--aktif::after {
+  background: #fff;
+  transform: scale(1.35);
+}
+
+/* Dokunmatik ekranlarda oklar gizli, kaydırma yeterli */
+@media (hover: none) {
+  .slider__ok {
+    display: none;
+  }
+}

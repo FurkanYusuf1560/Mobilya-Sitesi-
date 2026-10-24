@@ -1,42 +1,38 @@
 :root {
-  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-  color: #241712;
-  background:
-    radial-gradient(circle at top, rgba(189, 141, 97, 0.16), transparent 35%),
-    linear-gradient(180deg, #f7f1ea 0%, #fffdf9 45%, #f2e6d6 100%);
+  --krem: #f6f1ea;
+  --krem-koyu: #ede4d7;
+  --kum: #d9c7af;
+  --yuzey: #fffcf7;
+  --murekkep: #1e1a16;
+  --murekkep-yumusak: #5f564d;
+  --murekkep-soluk: #8c8177;
+  --ceviz: #8a5a3b;
+  --ceviz-koyu: #6a4128;
+  --gece: #1b1814;
+  --cizgi: rgba(30, 26, 22, 0.12);
+  --golge: 0 18px 50px rgba(48, 32, 20, 0.1);
+  --golge-guclu: 0 30px 80px rgba(48, 32, 20, 0.18);
+
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-sans: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --max: 1200px;
+  --kenar: clamp(16px, 4vw, 40px);
+  --header-h: 76px;
+
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  color: var(--murekkep);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  --bg: #fffaf5;
-  --bg-soft: #f4ebe0;
-  --surface: rgba(255, 250, 244, 0.88);
-  --surface-strong: #fffdf9;
-  --text: #241712;
-  --text-soft: #655348;
-  --line: rgba(80, 50, 30, 0.12);
-  --shadow: 0 20px 60px rgba(68, 39, 18, 0.12);
-  --shadow-strong: 0 28px 80px rgba(68, 39, 18, 0.18);
-  --accent: #7d4d31;
-  --accent-strong: #5f3520;
-  --accent-soft: #d7b18c;
-  --max-width: 1240px;
 }
 
 html {
-  scroll-behavior: smooth;
   box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  overflow-x: hidden;
-  color: var(--text);
-  background: var(--bg);
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
 }
 
 *,
@@ -45,9 +41,37 @@ body {
   box-sizing: inherit;
 }
 
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--murekkep);
+  background: var(--krem);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.08;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
 }
 
 button,
@@ -56,15 +80,139 @@ a {
 }
 
 img,
-video {
+video,
+iframe {
   display: block;
   max-width: 100%;
 }
 
-#root {
-  min-height: 100vh;
+:focus-visible {
+  outline: 2px solid var(--ceviz);
+  outline-offset: 3px;
 }
 
 ::selection {
-  background: rgba(125, 77, 49, 0.18);
+  background: rgba(138, 90, 59, 0.2);
+}
+
+/* Ortak yerleşim */
+
+.kap {
+  width: min(var(--max), 100% - var(--kenar) * 2);
+  margin-inline: auto;
+}
+
+.ust-baslik {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ceviz);
+}
+
+.ust-baslik::before {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+}
+
+/* Butonlar */
+
+.buton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 50px;
+  padding: 0 24px;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.buton:hover {
+  transform: translateY(-2px);
+}
+
+.buton--ana {
+  background: var(--murekkep);
+  color: var(--krem);
+}
+
+.buton--ana:hover {
+  background: var(--ceviz-koyu);
+}
+
+.buton--cizgi {
+  border-color: rgba(30, 26, 22, 0.25);
+  background: transparent;
+  color: var(--murekkep);
+}
+
+.buton--cizgi:hover {
+  border-color: var(--murekkep);
+}
+
+.buton--acik {
+  background: var(--krem);
+  color: var(--murekkep);
+}
+
+.buton--acik:hover {
+  background: #fff;
+}
+
+.buton--cizgi-acik {
+  border-color: rgba(246, 241, 234, 0.35);
+  color: var(--krem);
+}
+
+.buton--cizgi-acik:hover {
+  border-color: var(--krem);
+}
+
+.buton--kucuk {
+  min-height: 42px;
+  padding: 0 18px;
+  font-size: 0.88rem;
+}
+
+/* Görünür olunca beliren içerik */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.reveal--gorunur {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --header-h: 64px;
+  }
 }
