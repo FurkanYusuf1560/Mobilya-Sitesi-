@@ -225,7 +225,8 @@ function Home() {
               title="Pako Dizayn atölye konumu"
               src={iletisim.haritaEmbed}
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
           </Reveal>
         </div>
