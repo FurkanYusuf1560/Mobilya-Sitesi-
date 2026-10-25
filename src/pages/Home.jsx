@@ -42,8 +42,8 @@ function Home() {
               Atölyeden evinize, <em>ömürlük</em> mobilya.
             </h1>
             <p>
-              Dolap, komodin ve şifonyerlerimizi Siteler'deki kendi atölyemizde, 35 yılı aşkın
-              ustalıkla üretiyoruz.
+              Gardırop, dolap, makyaj masası, komodin ve şifonyerlerimizi Ankara Siteler'deki kendi
+              atölyemizde, 35 yılı aşkın ustalıkla üretiyoruz.
             </p>
             <div className="giris__butonlar">
               <a className="buton buton--ana" href={whatsappLink()} target="_blank" rel="noopener noreferrer">
@@ -87,7 +87,10 @@ function Home() {
               <span className="ust-baslik">Ürünlerimiz</span>
               <h2>Atölyemizden çıkan modeller.</h2>
             </div>
-            <p>Beğendiğiniz modelin altındaki butona dokunun, fiyat ve detayları WhatsApp'tan iletelim.</p>
+            <p>
+              Aynalı gardırop, köşe dolap, sürgülü dolap ve ışıklı makyaj masası modellerimiz.
+              Beğendiğiniz modelin altındaki butona dokunun, fiyat ve detayları WhatsApp'tan iletelim.
+            </p>
           </Reveal>
 
           {doluKategoriler.length > 1 ? (
@@ -154,8 +157,8 @@ function Home() {
           <Reveal className="hakkimizda__metin" gecikme={150}>
             <p>
               Halil Çevik, 35 yılı aşkın ustalık birikimini Pako Dizayn çatısı altında çağdaş
-              çizgilerle buluşturuyor. Dolaplar, komodinler ve şifonyerler; doğru malzeme, temiz
-              işçilik ve uzun ömürlü kullanım odağıyla hazırlanıyor.
+              çizgilerle buluşturuyor. Gardıroplar, makyaj masaları, komodinler ve şifonyerler; doğru
+              malzeme, temiz işçilik ve uzun ömürlü kullanım odağıyla hazırlanıyor.
             </p>
             <p>
               Yatak odanızda sıcak, düzenli ve karakterli bir atmosfer arıyorsanız; burada her
@@ -177,8 +180,8 @@ function Home() {
             <span className="ust-baslik">İletişim</span>
             <h2>Bize ulaşın.</h2>
             <p>
-              Ürünlerimiz, fiyatlar ve teslimat hakkında bilgi almak için bizi arayabilir ya da
-              WhatsApp'tan yazabilirsiniz.
+              Atölyemiz Ankara Siteler'de, Güneşevler Eğribucak Sokak'ta. Ürünlerimiz, fiyatlar ve
+              teslimat hakkında bilgi almak için bizi arayabilir ya da WhatsApp'tan yazabilirsiniz.
             </p>
             <ul className="iletisim__liste">
               <li>

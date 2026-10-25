@@ -11,7 +11,7 @@ function Footer() {
         <div className="alt__marka">
           <span className="alt__isim">Pako Dizayn</span>
           <p>
-            Dolap, komodin ve şifonyerlerimizi Ankara Altındağ'daki
+            Gardırop, dolap, makyaj masası, komodin ve şifonyerlerimizi Ankara Siteler'deki
             atölyemizde, 35 yılı aşkın tecrübeyle üretiyoruz.
           </p>
         </div>

@@ -28,7 +28,7 @@
   ],
   "rewrites": [
     {
-      "source": "/((?!robots.txt|sitemap.xml|favicon.svg|katalog/.*|images/.*|videos/.*|assets/.*).*)",
+      "source": "/((?!robots.txt|sitemap.xml|favicon.svg|og-gorsel.jpg|katalog/.*|images/.*|videos/.*|assets/.*).*)",
       "destination": "/index.html"
     }
   ],
