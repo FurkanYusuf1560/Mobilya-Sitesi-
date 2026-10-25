@@ -67,7 +67,7 @@ function Home() {
         <div className="kap giris__seritler">
           <div>
             <strong>Kendi üretimimiz</strong>
-            <span>Altındağ'daki atölyemizde</span>
+            <span>Siteler'deki atölyemizde</span>
           </div>
           <div>
             <strong>Usta işçiliği</strong>
