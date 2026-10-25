@@ -11,7 +11,7 @@ function Footer() {
         <div className="alt__marka">
           <span className="alt__isim">Pako Dizayn</span>
           <p>
-            Sn Çevik Mobilya. Dolap, komodin ve şifonyerlerimizi Ankara Altındağ'daki
+            Dolap, komodin ve şifonyerlerimizi Ankara Altındağ'daki
             atölyemizde, 35 yılı aşkın tecrübeyle üretiyoruz.
           </p>
         </div>
@@ -34,7 +34,7 @@ function Footer() {
       </div>
 
       <div className="kap alt__taban">
-        <span>© {new Date().getFullYear()} Sn Çevik Mobilya – Pako Dizayn</span>
+        <span>© {new Date().getFullYear()} Pako Dizayn</span>
         <span>Ankara'da el işçiliğiyle üretilmiştir.</span>
       </div>
     </footer>

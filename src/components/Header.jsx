@@ -36,7 +36,7 @@ function Header() {
       <div className="ust__ic kap">
         <a className="marka" href="#" onClick={kapat} aria-label="Pako Dizayn – sayfa başı">
           <span className="marka__isim">Pako Dizayn</span>
-          <span className="marka__alt">Sn Çevik Mobilya</span>
+          <span className="marka__alt">Mobilya</span>
         </a>
 
         <nav className={`menu ${acik ? "menu--acik" : ""}`} aria-label="Ana menü">
