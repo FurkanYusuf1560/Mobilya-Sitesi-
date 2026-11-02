@@ -6,6 +6,7 @@
 export const kategoriler = [
   { slug: "dolap", ad: "Dolap" },
   { slug: "makyaj-masasi", ad: "Makyaj Masası" },
+  { slug: "genc-odasi", ad: "Genç Odası" },
   { slug: "komodin", ad: "Komodin" },
   { slug: "sifonyer", ad: "Şifonyer" },
 ];

@@ -1,0 +1,133 @@
+/* Kategori sayfası girişi */
+
+.kategori-giris {
+  padding: calc(var(--header-h) + clamp(28px, 5vw, 56px)) 0 clamp(40px, 6vw, 72px);
+}
+
+.kategori-giris h1 {
+  max-width: 18ch;
+  margin: 20px 0 20px;
+  font-size: clamp(2.3rem, 5vw, 4.2rem);
+  line-height: 1.04;
+}
+
+.kategori-giris p {
+  max-width: 52ch;
+  font-size: 1.12rem;
+  color: var(--murekkep-yumusak);
+}
+
+.kategori-giris .giris__butonlar {
+  margin-top: 28px;
+}
+
+.yol-izi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 28px;
+  font-size: 0.88rem;
+  color: var(--murekkep-soluk);
+}
+
+.yol-izi a:hover {
+  color: var(--ceviz);
+}
+
+.kategori-alt-baslik {
+  margin-bottom: clamp(28px, 4vw, 44px);
+  font-size: clamp(1.8rem, 3.6vw, 2.8rem);
+}
+
+.kategori-not {
+  max-width: 60ch;
+  margin: -16px 0 clamp(28px, 4vw, 40px);
+  color: var(--murekkep-yumusak);
+}
+
+/* Bilgilendirici metin */
+
+.kategori-metin {
+  background: var(--krem-koyu);
+}
+
+.kategori-metin__ic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px, 6vw, 80px);
+}
+
+.kategori-metin h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.kategori-metin p {
+  color: var(--murekkep-yumusak);
+}
+
+.kategori-metin p + p {
+  margin-top: 14px;
+}
+
+/* Sık sorulan sorular */
+
+.sss__ic {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: clamp(32px, 6vw, 80px);
+  align-items: start;
+}
+
+.sss h2 {
+  margin-top: 16px;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+}
+
+.sss__liste details {
+  border-top: 1px solid var(--cizgi);
+}
+
+.sss__liste details:last-child {
+  border-bottom: 1px solid var(--cizgi);
+}
+
+.sss__liste summary {
+  position: relative;
+  padding: 20px 36px 20px 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+
+.sss__liste summary::-webkit-details-marker {
+  display: none;
+}
+
+.sss__liste summary::after {
+  content: "+";
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--ceviz);
+}
+
+.sss__liste details[open] summary::after {
+  content: "–";
+}
+
+.sss__liste details p {
+  padding: 0 0 22px;
+  color: var(--murekkep-yumusak);
+}
+
+@media (max-width: 860px) {
+  .kategori-metin__ic,
+  .sss__ic {
+    grid-template-columns: 1fr;
+  }
+}

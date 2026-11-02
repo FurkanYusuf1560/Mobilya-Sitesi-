@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faLocationDot, faClock } from "@fortawesome/free-solid-svg-icons";
 import { iletisim, whatsappLink } from "../data/site";
+import { sayfalar } from "../data/sayfalar";
 import "./Footer.css";
 
 function Footer() {
@@ -14,6 +15,16 @@ function Footer() {
             Gardırop, dolap, makyaj masası, komodin ve şifonyerlerimizi Ankara Siteler'deki
             atölyemizde, 35 yılı aşkın tecrübeyle üretiyoruz.
           </p>
+        </div>
+
+        <div className="alt__sutun">
+          <h3>Ürünler</h3>
+          {sayfalar.map((sayfa) => (
+            <a key={sayfa.yol} href={sayfa.yol}>
+              {sayfa.menuAdi}
+            </a>
+          ))}
+          <a href="/#urunler">Tüm ürünler</a>
         </div>
 
         <div className="alt__sutun">
@@ -30,6 +41,9 @@ function Footer() {
           <a href={iletisim.haritaLink} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faLocationDot} /> {iletisim.adres}
           </a>
+          <span className="alt__saat">
+            <FontAwesomeIcon icon={faClock} /> {iletisim.calismaSaatleri}
+          </span>
         </div>
       </div>
 

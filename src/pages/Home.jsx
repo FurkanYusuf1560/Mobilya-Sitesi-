@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp, faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { faPhone, faLocationDot, faClock, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Reveal from "../components/Reveal";
 import Gorsel from "../components/Gorsel";
-import UrunKarti, { BosUrunKarti } from "../components/UrunKarti";
-import Lightbox from "../components/Lightbox";
+import { BosUrunKarti } from "../components/UrunKarti";
+import UrunIzgara from "../components/UrunIzgara";
 import CtaBant from "../components/CtaBant";
 import { kategoriler, urunler } from "../data/urunler";
+import { sayfalar } from "../data/sayfalar";
 import { anaGorsel, iletisim, whatsappLink } from "../data/site";
 import "./Home.css";
 
@@ -16,34 +17,23 @@ const doluKategoriler = kategoriler.filter((kategori) =>
   urunler.some((urun) => urun.kategori === kategori.slug)
 );
 
-function kategoriAdi(slug) {
-  return kategoriler.find((kategori) => kategori.slug === slug)?.ad;
-}
-
 function Home() {
   const [filtre, setFiltre] = useState("hepsi");
-  const [acikUrun, setAcikUrun] = useState(null);
-  const [sira, setSira] = useState(null);
 
   const gosterilen = filtre === "hepsi" ? urunler : urunler.filter((urun) => urun.kategori === filtre);
-
-  const fotografiAc = (urun, index) => {
-    setAcikUrun(urun);
-    setSira(index);
-  };
 
   return (
     <main>
       <section className="giris">
         <div className="kap giris__ic">
           <Reveal className="giris__metin">
-            <span className="ust-baslik">Ankara-Siteler · Mobilya atölyesi</span>
+            <span className="ust-baslik">Atölyeden evinize, ömürlük mobilya</span>
             <h1>
-              Atölyeden evinize, <em>ömürlük</em> mobilya.
+              Ankara Siteler'de <em>yatak odası takımı</em> ve mobilya imalatı.
             </h1>
             <p>
-              Gardırop, dolap, makyaj masası, komodin ve şifonyerlerimizi Ankara Siteler'deki kendi
-              atölyemizde, 35 yılı aşkın ustalıkla üretiyoruz.
+              Yatak odası takımı, aynalı gardırop, köşe dolap, makyaj masası, komodin ve şifonyerlerimizi
+              Ankara Siteler'deki kendi atölyemizde, 35 yılı aşkın ustalıkla üretiyoruz.
             </p>
             <div className="giris__butonlar">
               <a className="buton buton--ana" href={whatsappLink()} target="_blank" rel="noopener noreferrer">
@@ -109,23 +99,17 @@ function Home() {
             </div>
           ) : null}
 
-          <div className="urun-izgara">
-            {urunler.length > 0
-              ? gosterilen.map((urun, index) => (
-                  <Reveal key={urun.ad} gecikme={(index % 3) * 100}>
-                    <UrunKarti
-                      urun={urun}
-                      kategoriAd={kategoriAdi(urun.kategori)}
-                      onAc={(fotoIndex) => fotografiAc(urun, fotoIndex)}
-                    />
-                  </Reveal>
-                ))
-              : kategoriler.map((kategori, index) => (
-                  <Reveal key={kategori.slug} gecikme={index * 100}>
-                    <BosUrunKarti tur={kategori.slug} kategoriAd={kategori.ad} />
-                  </Reveal>
-                ))}
-          </div>
+          {urunler.length > 0 ? (
+            <UrunIzgara urunler={gosterilen} />
+          ) : (
+            <div className="urun-izgara">
+              {kategoriler.map((kategori, index) => (
+                <Reveal key={kategori.slug} gecikme={index * 100}>
+                  <BosUrunKarti tur={kategori.slug} kategoriAd={kategori.ad} />
+                </Reveal>
+              ))}
+            </div>
+          )}
 
           {urunler.length === 0 ? (
             <p className="urun-not">
@@ -136,14 +120,15 @@ function Home() {
               .
             </p>
           ) : null}
+
+          <nav className="kategori-linkleri" aria-label="Kategoriler">
+            {sayfalar.map((sayfa) => (
+              <a key={sayfa.yol} href={sayfa.yol}>
+                {sayfa.menuAdi} modelleri <FontAwesomeIcon icon={faArrowRight} />
+              </a>
+            ))}
+          </nav>
         </div>
-        {acikUrun ? (
-          <Lightbox
-            gorseller={acikUrun.fotograflar.map((foto) => ({ src: foto.buyuk, alt: acikUrun.ad }))}
-            sira={sira}
-            setSira={setSira}
-          />
-        ) : null}
       </section>
 
       <section className="bolum hakkimizda" id="hakkimizda">
@@ -216,6 +201,13 @@ function Home() {
                   <a href={iletisim.haritaLink} target="_blank" rel="noopener noreferrer">
                     {iletisim.adres}
                   </a>
+                </div>
+              </li>
+              <li>
+                <FontAwesomeIcon icon={faClock} />
+                <div>
+                  <span>Çalışma saatleri</span>
+                  <p>{iletisim.calismaSaatleri}</p>
                 </div>
               </li>
             </ul>

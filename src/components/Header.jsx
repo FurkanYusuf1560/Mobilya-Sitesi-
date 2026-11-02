@@ -6,9 +6,9 @@ import { iletisim, katalog, whatsappLink } from "../data/site";
 import "./Header.css";
 
 const baglantilar = [
-  { href: "#urunler", ad: "Ürünler" },
-  { href: "#hakkimizda", ad: "Hakkımızda" },
-  { href: "#iletisim", ad: "İletişim" },
+  { href: "/#urunler", ad: "Ürünler" },
+  { href: "/#hakkimizda", ad: "Hakkımızda" },
+  { href: "/#iletisim", ad: "İletişim" },
 ];
 
 function Header() {
@@ -34,7 +34,7 @@ function Header() {
   return (
     <header className={`ust ${kaydi || acik ? "ust--dolu" : ""}`}>
       <div className="ust__ic kap">
-        <a className="marka" href="#" onClick={kapat} aria-label="Pako Dizayn – sayfa başı">
+        <a className="marka" href="/" onClick={kapat} aria-label="Pako Dizayn – sayfa başı">
           <span className="marka__isim">Pako Dizayn</span>
           <span className="marka__alt">Mobilya</span>
         </a>

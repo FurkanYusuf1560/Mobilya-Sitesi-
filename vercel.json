@@ -1,8 +1,9 @@
 {
+  "cleanUrls": true,
   "redirects": [
     {
       "source": "/dolap",
-      "destination": "/",
+      "destination": "/gardirop",
       "permanent": true
     },
     {
